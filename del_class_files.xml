@@ -1,0 +1,18 @@
+<?xml version="1.0"?>															<!--  AUTHOR  HIRAK		-->
+<project name="deleteclassfiles" basedir="." default="del-bin-classfiles">
+		
+<property name="curr.dir" value="."/>
+<property name="bin.dir" value="${curr.dir}/bin"/>
+	
+<target name="del-bin-classfiles" description="delete all files not required for OSDC">
+	<delete>
+		<fileset dir="${bin.dir}">
+			<include name="**/*.class"/>
+			<include name="**/*.ear"/>
+			<include name="**/*.war"/>
+			<include name="**/*.jar"/>
+		</fileset>
+	</delete>
+</target>
+
+</project>
